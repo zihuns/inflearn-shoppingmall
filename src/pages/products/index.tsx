@@ -8,7 +8,7 @@ const ProductList = () => {
     fetcher({
       method: "GET",
       path: "/products",
-    }),
+    })
   );
 
   /*
@@ -21,11 +21,11 @@ const ProductList = () => {
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
     [[Prototype]]: Object
   */
-  console.log(data);
 
   return (
-    <div className="products">
-      <ul>
+    <div>
+      <h2>상품목록</h2>
+      <ul className="products">
         {data?.map((product) => (
           <ProductItem {...product} key={product.id} />
         ))}
