@@ -24,7 +24,7 @@ const ProductList = () => {
   console.log(data);
 
   return (
-    <div>
+    <div className="products">
       <ul>
         {data?.map((product) => (
           <ProductItem {...product} key={product.id} />
